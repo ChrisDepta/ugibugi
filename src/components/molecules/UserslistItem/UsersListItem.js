@@ -9,7 +9,7 @@ const UsersListItem = ({ userData: { name, attendance = '0%', average } }) => {
       <div>{average}</div>
       <div>
         <span>{name}</span>
-        <span>{attendance}</span>
+        <span>Attendance: {attendance}</span>
       </div>
       <Button />
     </Wrapper>

@@ -2,12 +2,14 @@ import { theme } from 'assets/styles/theme';
 import styled from 'styled-components';
 
 export const Wrapper = styled.li`
-  height: 8vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   positioon: relative;
   border-bottom: 2px solid ${({ theme }) => theme.colors.lightGrey};
-
+:last-child {
+  border: none;
+}
   div:nth-child(1) {
     display: flex;
     justify-content: center;
