@@ -1,4 +1,3 @@
-import { theme } from 'assets/styles/theme';
 import styled from 'styled-components';
 
 export const Wrapper = styled.li`
@@ -18,7 +17,7 @@ export const Wrapper = styled.li`
     color: ${({ theme }) => theme.colors.white};
     width: 30px;
     height: 30px;
-    background-color: ${({ average }) => {
+    background-color: ${({ average, theme }) => {
       if (parseInt(average) >= 4) return theme.colors.success;
       else if (parseInt(average) >= 3) return theme.colors.warning;
       else if (parseInt(average) >= 2) return theme.colors.error;
