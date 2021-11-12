@@ -5,5 +5,4 @@ export const Label = styled.label`
   font-weight: bold;
   font-size: 12px;
   color: ${({ theme }) => theme.colors.darkGrey};
-  margin: 10px 0;
 `;

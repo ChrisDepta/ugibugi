@@ -1,55 +1,54 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.li`
-  height: 10vh;
   display: flex;
   align-items: center;
-  positioon: relative;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.lightGrey};
-:last-child {
-  border: none;
-}
-  div:nth-child(1) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: ${({ theme }) => theme.fontSize.s};
-    color: ${({ theme }) => theme.colors.white};
-    width: 30px;
-    height: 30px;
-    background-color: ${({ average, theme }) => {
-      if (parseInt(average) >= 4) return theme.colors.success;
-      else if (parseInt(average) >= 3) return theme.colors.warning;
-      else if (parseInt(average) >= 2) return theme.colors.error;
-    }};
-    padding: 10px;
-    margin-right: 20px;
-    border-radius: 50%;
-    border-style: none;
-  }
+  position: relative;
 
-  div:nth-child(2) {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    span:nth-child(1) 
-      font-size: ${({ theme }) => theme.fontSize.l};
-      font-weight: bold;
-    }
-    span:nth-child(2) {
-      font-size: ${({ theme }) => theme.fontSize.m};
-      font-weight: normal;
-    }
-  }
-
-  $:not(:last-child)::after {
+  &:not(:last-child)::after {
     content: '';
-    positioon: absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 1px;
     background-color: lightgrey;
+  }
+`;
+
+export const StyledAverage = styled.div`
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: ${({ theme }) => theme.fontSize.s};
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  background: ${({ theme, value }) => {
+    if (value > 4) return theme.colors.success;
+    if (value > 3) return theme.colors.warning;
+    if (value > 2) return theme.colors.error;
+    return theme.colors.grey;
+  }};
+`;
+
+export const StyledInfo = styled.div`
+  padding: 25px 20px;
+
+  p {
+    margin: 0;
+    color: ${({ theme }) => theme.colors.darkGrey};
+  }
+
+  p:first-child {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
+
+  p:last-child {
+    font-size: ${({ theme }) => theme.fontSize.m};
   }
 `;
