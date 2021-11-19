@@ -21,7 +21,7 @@ const AddUser = ({ handleAddUser, formValues, handleInputChange }) => {
 AddUser.propTypes = {
   handleAddUser: PropTypes.func.isRequired,
   formValues: PropTypes.shape(UserShape),
-  handleInputChange: PropTypes.func.isRequired,
+  handleInputChange: PropTypes.func.isRequired
 };
 
 export default AddUser;

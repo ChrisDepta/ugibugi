@@ -14,7 +14,7 @@ const Dashboard = ({ users, deleteUser }) => {
 
 Dashboard.propTypes = {
   users: PropTypes.arrayOf(PropTypes.shape(UserShape)),
-  deleteUser: PropTypes.func,
+  deleteUser: PropTypes.func
 };
 
 export default Dashboard;

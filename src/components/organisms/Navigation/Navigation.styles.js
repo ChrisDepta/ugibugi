@@ -9,6 +9,8 @@ export const Wrapper = styled.nav`
   border-right: 1px solid ${({ theme }) => theme.colors.darkPurple};
   justify-content: flex-start;
   padding: 30px 0;
+  grid-row: 1 / 3;
+  grid-column: 1 / 1;
 `;
 
 export const Logo = styled.div`
@@ -23,7 +25,7 @@ export const Logo = styled.div`
   h1 {
     font-size: 15px;
     color: ${({ theme }) => theme.colors.white};
-    text-align: right;
+    text-align: left;
     margin-right: 20px;
   }
 `;
@@ -32,6 +34,6 @@ export const StyledLink = styled(Link)`
   font-weight: bold;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.darkGrey};
-  text-align: right;
-  margin: 15px 20px 15px auto;
+  text-align: left;
+  margin: 15px 20px;
 `;

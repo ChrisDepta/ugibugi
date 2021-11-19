@@ -16,8 +16,8 @@ export const Wrapper = styled.li`
 `;
 
 export const StyledAverage = styled.div`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -35,6 +35,7 @@ export const StyledAverage = styled.div`
 
 export const StyledInfo = styled.div`
   padding: 25px 20px;
+  flex-grow: 1;
 
   p {
     margin: 0;
